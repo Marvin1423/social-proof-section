@@ -13,7 +13,7 @@ body{
 @keyframes leftToRight{
     from{
         transform: translateX(-100px);
-        opacity: 0.1s;
+        opacity: 0.2s;
     }
 
     to{
