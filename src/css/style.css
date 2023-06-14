@@ -3,6 +3,12 @@
 body{
     font-family: 'League Spartan', sans-serif;
     font-size: 15px;
+    display: flex;
+    height: 99vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -29,6 +35,7 @@ body{
     margin-bottom: 40px;
     margin-left: 10px;
     gap: 20px;
+    overflow: hidden;
 }
 
 .text h1{
@@ -111,7 +118,7 @@ body{
     border-radius: 8px;
     padding: 30px;
     background-color: var(--primary-dark);
-    margin: 0 auto;
+    margin: 0 5px;
 }
 
 .card img {
