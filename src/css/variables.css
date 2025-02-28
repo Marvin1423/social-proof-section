@@ -1,7 +1,8 @@
-:root {
-    --primary-dark: hsl(300, 43%, 22%);
-    --primary-soft: hsl(332, 79%, 66%);
+:root{
+    --primary-color: hsl(300, 43%, 22%);
+    --contrast-color: hsl(333, 80%, 67%);
 
-    --neutral-dark: hsl(303, 10%, 53%);
-    --neutral-light: hsl(300, 24%, 96%);
+    --primary-neutral-color: hsl(303, 10%, 53%);
+    --secondary-neutral-color: hsl(300, 24%, 96%);
+    --base-color: hsl(0, 0%, 100%);
 }
