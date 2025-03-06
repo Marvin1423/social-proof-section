@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
+body{
+    overflow: hidden;
+}
 
 .container{
     display: flex;
@@ -21,13 +24,19 @@ main{
 
 .container main .about h1{
     color: var(--primary-color);
+    position: relative;
+    left: 0;
     font-size: 4vw;
+    animation: leftToRight 1s;
 }
 
 .container main .about p{
     margin-top: 20px;
     color: var(--primary-neutral-color);
     font-size: clamp(1.1vw , 120%, 4vw);
+    position: relative;
+    left: 0;
+    animation: leftToRight 1.2s;
 }
 
 .container main .ratings{
@@ -51,17 +60,22 @@ main{
     border-radius: 10px;
     gap: 25px;
     flex: 1;
+    transition: 0.1s;
+    position: relative;
+    left: 0;
+    animation: rightToLeft 1s;
 }
 
 .container main .ratings .rating-item:nth-child(2){
     position: relative;
-    left: 40px;
+    left: 60px;
+    animation: rightToLeft 1.2s;
 }
-
 
 .container main .ratings .rating-item:nth-child(3){
     position: relative;
     left: 80px;
+    animation: rightToLeft 1.4s;
 }
 
 .container .cards{
@@ -74,22 +88,28 @@ main{
 .container .cards .card{
     display: flex;
     flex-direction: column;
-    max-width: 35em;
+    max-width: 33em;
+    max-height: 17em;
     background-color: var(--primary-color);
     color: var(--base-color);
-    padding: 35px 50px;
+    padding: 32px 50px;
     border-radius: 10px;
     flex: 1;
+    position: relative;
+    top: 0;
+    animation: downToUp 1s, twistUp 0.4s 1.2s;
 }
 
 .container .cards .card:nth-child(2){
     position: relative;
     top: 20px;
+    animation: downToUp 1.2s,  twistUp 0.3s 1.4s;
 }
 
 .container .cards .card:nth-child(3){
     position: relative;
     top: 40px;
+    animation: downToUp 1.4s,  twistUp 0.2s 1.6s;
 }
 
 .container .cards .card .user-info{
@@ -98,7 +118,7 @@ main{
     gap: 20px;
     font-size: 1.1rem;
     margin-top: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .container .cards .card .user-info span{
@@ -118,7 +138,43 @@ main{
     max-width: 25em;
 }
 
+@keyframes rightToLeft{
+    0%{
+        left: 700px;
+        opacity: 0;
+    }
+}
+
+@keyframes leftToRight{
+    0%{
+        left: -800px;
+        opacity: 0;
+    }
+}
+
+@keyframes downToUp{
+    0%{
+        top: 700px;
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes twistUp{
+    0%{transform: translateY(0)}
+
+    50%{transform: translateY(-10px);}
+}
+
 @media(max-width: 1200px){
+    
+    body{
+        overflow-y: scroll;
+    }
+
     .container {
         margin: 20% auto;
     }
