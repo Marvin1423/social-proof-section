@@ -89,7 +89,6 @@ main{
     display: flex;
     flex-direction: column;
     max-width: 33em;
-    max-height: 17em;
     background-color: var(--primary-color);
     color: var(--base-color);
     padding: 32px 50px;
